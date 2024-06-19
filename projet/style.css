@@ -1,0 +1,192 @@
+body {
+  background: linear-gradient(to bottom, #3498db, #2c3e50);
+  margin: 0;
+  overflow: hidden;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: 'Arial', sans-serif;
+}
+
+h1 {
+  font-size: 2em;
+  color: #1c0863; /* Darker color for the title */
+  margin: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+#instructions-button {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  padding: 10px 20px;
+  font-size: 1.2em;
+  background-color: #3498db;
+  color: #ecf0f1;
+  border: 2px solid #2980b9;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border-radius: 4px;
+}
+
+#volumeSlider {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  width: 150px;
+}
+
+#top-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+  margin-bottom: 20px;
+}
+
+#game-container {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  overflow: hidden;
+  box-sizing: border-box;
+  border: 8px solid #3498db;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  cursor: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+}
+
+canvas {
+  display: block;
+  border: 4px solid #2980b9;
+  box-sizing: border-box;
+  border-radius: 6px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 1.2em;
+  background-color: #3498db;
+  color: #ecf0f1;
+  border: 4px solid #2980b9;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border-radius: 4px;
+}
+
+#menu {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding-top: 60px;
+}
+
+.modal-content {
+  background-color: #1c0863;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #1c0863;
+  width: 80%;
+  max-width: 500px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: #800000;
+}
+
+h2 {
+  color: #800000;
+}
+
+#scoreDisplay {
+  font-size: 1.5em;
+  margin-bottom: 15px;
+}
+
+#scoreForm {
+  display: flex;
+  flex-direction: column;
+ 	align-items: center;
+}
+
+#playerName {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #3498db;
+  border-radius: 4px;
+}
+
+button[type="submit"] {
+  padding: 10px 20px;
+  font-size: 1.2em;
+  background-color: #3498db;
+  color: #ecf0f1;
+  border: 2px solid #2980b9;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border-radius: 4px;
+}
+
+button[type="submit"]:hover {
+  background-color: #2980b9;
+}
+
+#scoresContainer {
+  color: #fff;
+  margin-top: 20px;
+  text-align: right; /* Align text to the right */
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.score-display {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 10px;
+  font-size: 1.5em;
+  color: #ecf0f1;
+  background-color: #3498db;
+  border: 2px solid #2980b9;
+  border-radius: 4px;
+}
